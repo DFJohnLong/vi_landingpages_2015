@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" style="background-attachment: fixed;">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Village Inn Welcome Offer</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/normalize.css">
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/skeleton.css">
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_coupon_landingpage_styles3.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+%%[ 
+	VAR @FutureDate, @CreatedDate 
+]%%
+<div id="header"> 
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row header">
+            <div class="two columns"><img class="logo" src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_logo_transparent.png"/></div>
+            <div class="ten columns "><!--<h1>DISCOUNT OFFERS</h1>--></div>
+        </div><!-- End Row -->
+    </div><!-- End Container div -->
+</div><!-- End id header -->
+    
+<div id="content">
+    <div class="container">
+        <div class="bodybox">
+			%%[IF NOT EMPTY(EmailAddress) then]%%
+			%%[ 
+				SET @EmailAddress = Lookup('VI_Master_Subscriber_Data','EmailAddress','EmailAddress',EmailAddress)
+				SET @CreatedDate = Lookup('VI_Master_Subscriber_Data','CreatedDate','EmailAddress',EmailAddress) 
+				SET @FutureDate = DateAdd(@CreatedDate, "28", "D") 
+			]%%	
+            <h1 class="heading">%%FirstName%% %%LastName%%<br/>Enjoy a Free Slice of Pie w/Adult Entree Purchase</h1>
+            <!--<div class="row couponoffer">
+                <div class="six columns percent"><h1>20% <span class="perclight">off</span></h1></div>
+                <div class="six columns incentive"><h3 class="check">entire guest check</h3></div>
+            </div><!-- End Coupon Offer -->
+            <h5 class="expiration">Expiration Date: &nbsp;<span class="light">%%=Format(@futureDate, "MM/d/yy")=%%</span></h4>
+            <div class="couponcontainer">
+                <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/BarCodeWelcome.gif" alt="Coupon Code" />
+            </div><!-- End Coupon Container -->
+            <p class="disclaimer">
+                Disclaimer: Valid only at participating locations. Not valid with other offers, promotions or discounts. One coupon per person per visit. No cash value. Sales tax, if applicable, must be paid by customer. Gratuity not included. Expires
+            </p>
+            <div class="printbttn">
+                <center>
+                   <script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 1;var pfHideImages = 0;var pfImageDisplayStyle = 'right';var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = '';var pfBtVersion='1';(function(){var js, pf;pf = document.createElement('script');pf.type = 'text/javascript';if('https:' == document.location.protocol){js='https://pf-cdn.printfriendly.com/ssl/main.js'}else{js='http://cdn.printfriendly.com/printfriendly.js'}pf.src=js;document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="http://www.printfriendly.com" style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="http://cdn.printfriendly.com/pf-button-big.gif" alt="Print Friendly and PDF"/></a>
+                </center>
+				%%[ELSE]%%
+				<center><h1>Sorry, you must access this coupon by clicking from your email.</h1></center>
+				%%[endif]%%
+            </div><!-- End Print Button -->
+        </div><!-- End Body Box -->
+    </div><!-- End Container -->
+</div><!-- End Content -->
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

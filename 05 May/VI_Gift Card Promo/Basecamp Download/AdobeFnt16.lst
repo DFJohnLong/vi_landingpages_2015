@@ -1,0 +1,132 @@
+%!Adobe-FontList 1.16
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Neutraface2Display-Inline
+FamilyName:Neutraface 2 Display
+StyleName:Inline
+MenuName:Neutraface 2 Display Inline
+StyleBits:0
+WeightClass:1000
+WidthClass:5
+AngleClass:0
+FullName:Neutraface 2 Display Inline
+WritingScript:Roman
+OutlineFileName:\Neutraface2Display-Inline.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:63398
+FileModTime:1192016798
+NameArray:0,Mac,4,Neutraface 2 Display Inline
+NameArray:0,Win,1,Neutraface 2 Display Inline
+NameArray:0,Win,16,Neutraface 2 Display
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Neutraface2Display-Titling
+FamilyName:Neutraface 2 Display
+StyleName:Titling
+MenuName:Neutraface 2 Display Titling
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Neutraface 2 Display Titling
+WritingScript:Roman
+OutlineFileName:\Neutraface2Display-Titling.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:52784
+FileModTime:1426601997
+NameArray:0,Mac,4,Neutraface 2 Display Titling
+NameArray:0,Win,1,Neutraface 2 Display Titling
+NameArray:0,Win,16,Neutraface 2 Display
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:NeutrafaceDisplay-Titling
+FamilyName:Neutraface Display
+StyleName:Titling
+MenuName:Neutraface Display Titling
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Neutraface Display Titling
+WritingScript:Roman
+OutlineFileName:\NeutrafaceDisplay-Titling.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:97284
+FileModTime:1424445391
+NameArray:0,Mac,4,Neutraface Display Titling
+NameArray:0,Win,1,Neutraface Display Titling
+NameArray:0,Win,16,Neutraface Display
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:NeutrafaceText-Bold
+FamilyName:Neutraface Text
+StyleName:Bold
+MenuName:Neutraface Text Bold
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Neutraface Text Bold
+WritingScript:Roman
+OutlineFileName:\NeutrafaceText-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:140136
+FileModTime:1424445167
+NameArray:0,Mac,4,Neutraface Text Bold
+NameArray:0,Win,1,Neutraface Text Bold
+NameArray:0,Win,16,Neutraface Text
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SignPainter-HouseScript
+FamilyName:SignPainter
+StyleName:HouseScript
+MenuName:SignPainter-HouseScript
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:SignPainter-HouseScript
+WritingScript:Roman
+OutlineFileName:\SignPaiHouScr
+DataFormat:POSTResource
+UsesStandardEncoding:no
+isCFF:no
+FileLength:52227
+FileModTime:920565438
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:SignPainter-HouseScript
+OutlineFileName:\SignPainter-HouseScript
+ResourceID:15874
+MacStyle:0
+FileLength:46166
+FileModTime:1331136475
+%EndFont
+

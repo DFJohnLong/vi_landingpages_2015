@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" style="background-attachment: fixed;">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Village Inn Coupon</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/normalize.css">
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/skeleton.css">
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_coupon_landingpage_styles3.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+%%[ 
+	VAR @testlist_lookup, @allsub_lookup, @DE_name
+]%%
+<div id="header"> 
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row header">
+            <div class="two columns"><a href="http://www.villageinn.com" target="_blank" border="0"><img class="logo" src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_logo_transparent.png"/></a></div>
+            <div class="ten columns "><!--<h1>DISCOUNT OFFERS</h1>--></div>
+        </div><!-- End Row -->
+    </div><!-- End Container div -->
+</div><!-- End id header -->
+    
+<div id="content">
+    <div class="container">
+        <div class="bodybox">
+			%%[IF NOT EMPTY(EmailAddress) then]%%
+			
+			%%[ 
+				SET @testlist_lookup = Lookup('VI Approver Test Seed DE','EmailAddress','EmailAddress',EmailAddress)
+					IF NOT EMPTY(@testlist_lookup) THEN
+					SET @DE_name = 'VI Approver Test Seed DE'
+					ELSE
+					SET @allsub_lookup = Lookup('VI_Master_Subscriber_Data','EmailAddress','EmailAddress',EmailAddress)
+						IF NOT EMPTY(@allsub_lookup) THEN
+						SET @DE_name = 'VI_Master_Subscriber_Data'
+							ELSE
+							SET @errortext = "I'm sorry, we couldn't find your record for this coupon."
+						ENDIF
+					ENDIF
+			]%%	
+            <h1 class="heading" style="text-transform: uppercase;">%%FirstName%% %%LastName%% &mdash; GET YOUR FRIENDS TOGETHER FOR:</h1>
+            <div class="row couponoffer">
+                <div class="two columns percent"><h1><sup><span style="font-size:31px; font-weight: 400;">$</span></sup>5 <span class="perclight"></span></h1></div>
+                <div class="ten columns incentive" style="padding-top: 6px !important;"><h3 class="check" style="font-size: 2.5rem !important; font-weight: 400 !important;">OPENING DAY<br/>ALL-AMERICAN CHEESEBURGER<br/>(with beverage purchase)</h3></div>
+            </div><!-- End Coupon Offer -->
+			<div class="couponcontainer">
+                <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/5-openingday-frenchtoastcombo2.gif" alt="Coupon Code" />
+            </div><!-- End Coupon Container -->
+			<!--<p class="disclaimer">
+                $5 Friday offers are valid at participating Colorado Village Inn locations on 4/10/15 only with the purchase of a beverage. Not valid with other offers, promotions or discounts. Not valid with Pie Rush Wednesday<sup>&reg;</sup>. One coupon per person per visit. No cash value. Sales tax, if applicable, must be paid by customer. Gratuity not included. 
+            </p>--><!-- End Disclaimer -->
+			
+			<!--<div style="font-weight: bold; font-size: 30px; font-weight: bold; text-align: center; margin-bottom: 2rem;">- OR -</div>-->
+			<div class="row couponoffer">
+                <div class="two columns percent"><h1><sup><span style="font-size:31px; font-weight: 400;">$</span></sup>5 <span class="perclight"></span></h1></div>
+                <div class="ten columns incentive" style="padding-top: 6px !important;"><h3 class="check" style="font-size: 2.5rem !important; font-weight: 400 !important;">OPENING DAY<br/>DOUBLE PLAY FRENCH TOAST COMBO<br/>(with beverage purchase)</h3></div>
+            </div><!-- End Coupon Offer -->
+<!--            <h5 class="expiration">Offer Valid: &nbsp;<span class="light">4/6/15 - 4/24/15</span></h4>-->
+            <div class="couponcontainer">
+                <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/5-openingday-allamericancheeseburger.gif" alt="Coupon Code" />
+            </div><!-- End Coupon Container -->
+            <p class="disclaimer">
+               $5 Friday offers are valid at participating Colorado Village Inn locations on 4/10/15 only with the purchase of a beverage. Not valid with other offers, promotions or discounts. Not valid with Pie Rush Wednesday<sup>&reg;</sup>. One coupon per person per visit. No cash value. Sales tax, if applicable, must be paid by customer. Gratuity not included.   
+            </p>
+            <div class="printbttn">
+                <center>
+                   <script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 1;var pfHideImages = 0;var pfImageDisplayStyle = 'right';var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = '';var pfBtVersion='1';(function(){var js, pf;pf = document.createElement('script');pf.type = 'text/javascript';if('https:' == document.location.protocol){js='https://pf-cdn.printfriendly.com/ssl/main.js'}else{js='http://cdn.printfriendly.com/printfriendly.js'}pf.src=js;document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="http://www.printfriendly.com" style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="http://cdn.printfriendly.com/pf-button-big.gif" alt="Print Friendly and PDF"/></a>
+                </center>
+				%%[ELSE]%%
+				<center><h1>Sorry, you must access this coupon by clicking from your email.</h1></center>
+				%%[endif]%%
+            </div><!-- End Print Button -->
+        </div><!-- End Body Box -->
+    </div><!-- End Container -->
+</div><!-- End Content -->
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

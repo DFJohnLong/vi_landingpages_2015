@@ -1,0 +1,164 @@
+/* For devices larger than 550px */
+@media screen and (max-width: 550px) {
+    html {
+        background-size: auto !important;
+    }
+    
+    #header .row .columns {
+        float: none !important;
+        text-align: center !important;
+    }
+    
+    .logo {
+        margin: auto !important;
+    }
+    
+    .percent, .incentive {
+        text-align: center !important;
+    }
+    
+    .couponoffer h1 {
+        margin: 0 !important;
+    }
+    
+    .incentive {
+        padding-top: 0 !important;
+    }
+    
+    .incentive h3 {
+        font-size: 2.5rem !important;
+    }
+    
+    p.disclaimer {
+        font-size: 10.5px !important;
+    }
+}
+
+html {
+    height: 100%;
+    background: url(http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/landingbg2.jpg) top center repeat #ACE0EE;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+#header, #content, #footer {
+    width: 100%;
+}
+
+#header {
+    height: 103px;
+    background: url(http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_header_bg.gif) top repeat-x #ed5e11;
+}
+
+.header {
+    padding: 15px 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+#content {
+    height: 100%;
+    padding-top: 30px;
+}
+
+.bodybox {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 15px 10px;
+    background-color: #ffffff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 5px dashed #ACE0EE;
+}
+
+.bodybox h1, h2, h3, h4, h5 {
+    color: #ED5E11;
+}
+
+.heading {
+    text-align: center;
+}
+
+.percent {
+    text-align: right;
+}
+
+.percent h1 {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.percent h1 .perclight {
+    font-weight: 300;
+}
+
+.incentive {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.incentive .check {
+    color: #555555;
+    font-family: Helvetica;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3.5rem;
+}
+
+.expiration {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.light {
+    color: #555555;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3.5rem;
+}
+
+.couponcontainer {
+    max-width: 200px;
+    margin: 15px 0;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.couponcontainer img {
+    width: 100%;
+}
+
+p.disclaimer {
+    max-width: 500px;
+    margin: 30px auto; 
+    font-size: 12px;
+    font-weight: 600;
+    font-style: italic;
+    color: #555555;
+}
+
+#footer {
+    background-color: #FAD36E;
+}
+

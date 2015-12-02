@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Village Inn: Join our eClub</title>
+    <!--[if lt IE 9]>
+      <script src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <meta name="robots" content="index,follow" />
+    <meta name="title" content="Village Inn"/>
+    <meta name="keywords" content="Village Inn, Breakfast All Day Long, Pies, Pie Rush Wednesday" /> 
+    <meta name="description" content="Since 1958, guests have enjoyed Village Inn's great-tasting food and extra-friendly service. Our breakfast heritage is based on made-from-scratch buttermilk pancakes, eggs cooked any style and a pot of hot coffee on every table."/> 
+    <link href='//fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="image_src" href="/images/linkrel.jpg" type="image/jpg" />
+
+    <link rel="image_src" href="http://www.villageinn.com/i/linkrel/linkrel.jpg">
+      
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="http://www.villageinn.com/eclub/" />
+    <meta property="og:url" content="http://www.villageinn.com/eclub/" />
+    <meta property="og:title" content="Village Inn: Join our eClub" />
+    <meta property="og:image" content="http://www.villageinn.com/i/linkrel/linkrel.jpg" />  
+    <meta property="og:description" content="Since 1958, guests have enjoyed Village Inn's great-tasting food and extra-friendly service. Our breakfast heritage is based on made-from-scratch buttermilk pancakes, eggs cooked any style and a pot of hot coffee on every table."  />  
+
+    <link href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_styles" rel="stylesheet" type="text/css" />
+    
+    <script async="" src="//connect.facebook.net/en_US/fbds.js"></script>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-11232639-1']);
+      _gaq.push(['_setDomainName', 'villageinn.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script>
+      (function() {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+          var fbds = document.createElement('script');
+          fbds.async = true;
+          fbds.src = '//connect.facebook.net/en_US/fbds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(fbds, s);
+          _fbq.loaded = true;
+        }
+        _fbq.push(['addPixelId', '1475685572719413']);
+      })();
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1475685572719413&amp;amp;ev=PixelInitialized" /&gt;</noscript>
+
+    <!-- Jquery Validation Assets --> 
+    <link rel="stylesheet" href="css/cmxformTemplate.css">  
+    <link rel="stylesheet" href="css/screen.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery.Validate/1.6/jQuery.Validate.js"></script>
+    <script>
+          $.validator.setDefaults({
+            submitHandler: function() {
+                alert("submitted!");
+            }
+        });
+
+        $().ready(function() {
+            // validate the comment form when it is submitted
+            $("#commentForm").validate();
+
+            // validate signup form on keyup and submit
+            $("#signupForm").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    username: {
+                        required: true,
+                        minlength: 2
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    confirm_password: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    topic: {
+                        required: "#newsletter:checked",
+                        minlength: 2
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    username: {
+                        required: "Please enter a username",
+                        minlength: "Your username must consist of at least 2 characters"
+                    },
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    confirm_password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long",
+                        equalTo: "Please enter the same password as above"
+                    },
+                    email: "Please enter a valid email address",
+                    agree: "Please accept our policy"
+                }
+            });
+
+            // propose username by combining first- and lastname
+            $("#username").focus(function() {
+                var firstname = $("#firstname").val();
+                var lastname = $("#lastname").val();
+                if (firstname && lastname && !this.value) {
+                    this.value = firstname + "." + lastname;
+                }
+            });
+
+            //code to hide topic selection, disable for demo
+            var newsletter = $("#newsletter");
+            // newsletter topics are optional, hide at first
+            var inital = newsletter.is(":checked");
+            var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
+            var topicInputs = topics.find("input").attr("disabled", !inital);
+            // show when newsletter is checked
+            newsletter.click(function() {
+                topics[this.checked ? "removeClass" : "addClass"]("gray");
+                topicInputs.attr("disabled", !this.checked);
+            });
+        });
+	</script>
+    <style>
+	#commentForm {
+		width: 500px;
+	}
+	#commentForm label {
+		width: 250px;
+	}
+	#commentForm label.error, #commentForm input.submit {
+		margin-left: 253px;
+	}
+	#signupForm {
+		width: 670px;
+	}
+	#signupForm label.error {
+		margin-left: 10px;
+		width: auto;
+		display: inline;
+	}
+	#newsletter_topics label.error {
+		display: none;
+		margin-left: 103px;
+	}
+	</style>
+    <!-- End Jquery Validation -->  
+      
+  </head>  
+    
+  <body class="index">
+
+    <header id="site-header" role="banner">
+      
+<nav class="container">
+  <div class="primary-nav-item">
+    <a class="primary-nav-link primary-nav-link-logo" href="http://www.villageinn.com/">Home</a>
+  </div>
+  <div class="primary-nav-mobile">
+<a href="#footer-mobile-nav">      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+</a>  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_nav_off_02.png" />
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <a class="primary-nav-link primary-nav-link-menu" href="http://www.villageinn.com/menu/">Menu</a>
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <a class="primary-nav-link primary-nav-link-pies" href="http://www.villageinn.com/pies/">Pies</a>
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <a class="primary-nav-link primary-nav-link-locations" href="http://www.villageinn.com/locations/">Locations</a>
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_nav_on_06.png" />
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <a class="primary-nav-link primary-nav-link-giftcards" href="http://www.villageinn.com/giftcards/">Gift Cards</a>
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <a class="primary-nav-link primary-nav-link-orderpies" href="http://www.piereservations.com/bsq/index.aspx?concept=vi&amp;amp;inputsource=VillageInn">Order Pies</a>
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <a class="primary-nav-link primary-nav-link-more" href="http://www.villageinn.com/more/">More</a>
+  </div>
+  <div class="primary-nav-item primary-nav-item-decor">
+    <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_nav_off_10.png" />
+  </div>
+</nav>
+
+    </header>
+
+    <main id="site-main" role="main">
+      
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-3">
+      <h2 class="heading-primary">
+        Sign-Up Today &amp; Receive a FREE Slice of Pie!*
+      </h2>
+      <h3 class="heading-primary-subheading">
+        Be the first to know about offers and events...
+      </h3>
+      <p>
+        <b>Sign up below and be the first to know about valuable deals, coupons, new entr&#233;es, and events at Village Inn.</b>
+      </p>
+      <p>
+        <small>* When you sign-up, our first email to you will include a coupon for a <b>Free Slice of Pie with Adult Entr&#233;e purchase</b>. So, with that coupon, just grab a bite to eat and your pie dessert is FREE!</small>
+      </p>
+		<form class="cmxform" id="signupForm" method="get" action="">
+			<fieldset>
+				<legend>Validating a complete form</legend>
+				<p>
+					<label for="firstname">Firstname</label>
+					<input id="firstname" name="firstname" type="text">
+				</p>
+				<p>
+					<label for="lastname">Lastname</label>
+					<input id="lastname" name="lastname" type="text">
+				</p>
+				<p>
+					<label for="username">Username</label>
+					<input id="username" name="username" type="text">
+				</p>
+				<p>
+					<label for="password">Password</label>
+					<input id="password" name="password" type="password">
+				</p>
+				<p>
+					<label for="confirm_password">Confirm password</label>
+					<input id="confirm_password" name="confirm_password" type="password">
+				</p>
+				<p>
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email">
+				</p>
+				<p>
+					<label for="agree">Please agree to our policy</label>
+					<input type="checkbox" class="checkbox" id="agree" name="agree">
+				</p>
+				<p>
+					<label for="newsletter">I'd like to receive the newsletter</label>
+					<input type="checkbox" class="checkbox" id="newsletter" name="newsletter">
+				</p>
+				<fieldset id="newsletter_topics">
+					<legend>Topics (select at least two) - note: would be hidden when newsletter isn't selected, but is visible here for the demo</legend>
+					<label for="topic_marketflash">
+						<input type="checkbox" id="topic_marketflash" value="marketflash" name="topic">Marketflash
+					</label>
+					<label for="topic_fuzz">
+						<input type="checkbox" id="topic_fuzz" value="fuzz" name="topic">Latest fuzz
+					</label>
+					<label for="topic_digester">
+						<input type="checkbox" id="topic_digester" value="digester" name="topic">Mailing list digester
+					</label>
+					<label for="topic" class="error">Please select at least two topics you'd like to receive.</label>
+				</fieldset>
+				<p>
+					<input class="submit" type="submit" value="Submit">
+				</p>
+			</fieldset>
+		</form>
+		
+        <form class="cmxform" id="signupForm" method="post" action="http://pages.villageinn-eclub.com/eclub-processing/">
+			
+			<input type="hidden" name="signup_source" value="signup_test-v1" />
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+					<label for="email" class="form-label">Email Address:</label>
+				</div>
+				<div class="table-col table-col-8">
+				  <input for="email" type="email" name="email" id="email" required>
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">              
+				  <label for="email2" class="form-label">Confirm Email Address:</label>
+				</div>
+				<div class="table-col table-col-8">              
+				  <input type="email" name="email2" id="email2" required>
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">              
+				  <label for="FirstName" class="form-label">First Name:</label>
+				</div>
+				<div class="table-col table-col-8">              
+				  <input type="text" name="firstname" id="FirstName" required>
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+				  <label for="LastName" class="form-label">Last Name:</label>
+				</div>
+				<div class="table-col table-col-8">
+				  <input type="text" name="LastName" id="LastName">
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+				  <label class="form-label">Favorite Location:</label>
+				</div>
+				<div class="table-col table-col-8">
+				  <select id="favlocale" name="favlocale" required>
+					  <option value="">Select...</option>
+					  <option value="700145">AK: Anchorage - 1130 E. Northern Lights Blvd.</option><option value="700145">AK: Anchorage - 1130 E. Northern Lights Blvd.</option><option value="700790">AK: Anchorage - 4403 Spenard Rd.</option><option value="700790">AK: Anchorage - 4403 Spenard Rd.</option><option value="700347">AK: Anchorage - 720 W. Dimond Blvd.</option><option value="700347">AK: Anchorage - 720 W. Dimond Blvd.</option><option value="700758">AR: Bentonville - 2300 SE Walton Blvd</option><option value="700745">AR: Fayetteville - 3364 N. College Ave</option><option value="700769">AR: Fort Smith - 7620 Rogers Ave.</option><option value="110390">AZ: Apache Junction - 575 W. Apache Trail</option><option value="110840">AZ: Avondale - 10010 W. McDowell Rd.</option><option value="110852">AZ: Chandler - 2780 E. Germann Rd.</option><option value="110846">AZ: Chandler - 2935 S. Alma School Rd.</option><option value="110138">AZ: Flagstaff - 3715 N. Kaspar Ave.</option><option value="110851">AZ: Gilbert - 5012 S. Power Rd.</option><option value="110329">AZ: Glendale - 5959 W.Thunderbird</option><option value="110850">AZ: Glendale - 9490 W. Northern Ave.</option><option value="110845">AZ: Goodyear - 2700 N. Litchfield Rd.</option><option value="100920">AZ: Marana - 5955 West Arizona Pavilions Drive</option><option value="110388">AZ: Mesa - 1155 S. Dobson Rd.</option><option value="110921">AZ: Mesa - 1859 South Stapley Drive</option><option value="110875">AZ: Mesa - 1863 S. Signal Butte Rd.</option><option value="110864">AZ: Mesa - 5961 E. McKellips Rd.</option><option value="110391">AZ: Mesa - 6813 E. Main St.</option><option value="110833">AZ: Phoenix - 310 E. Bell Rd.</option><option value="110800">AZ: Phoenix - 4040 E. Bell Rd.</option><option value="110779">AZ: Scottsdale - 17030 N. Scottsdale</option><option value="110835">AZ: Surprise - 14539 W. Grand Ave.</option><option value="110040">AZ: Tucson - 4245 E. Speedway Blvd.</option><option value="110324">AZ: Tucson - 6251 N. Oracle Rd.</option><option value="110892">AZ: Tucson - 9560 E. 22nd St.</option><option value="110785">CO: Aurora - 13800 E. Mississippi Ave.</option><option value="110147">CO: Aurora - 15200 E. Iliff Ave.</option><option value="110078">CO: Aurora - 15395 E. Colfax Ave.</option><option value="110777">CO: Aurora - 18601 E. Hampden Ave.</option><option value="110859">CO: Aurora - 24102 E. Prospect Ave.</option><option value="110774">CO: Aurora - 6370 S. Parker Rd.</option><option value="110035">CO: Aurora - 921 S. Havana</option><option value="700795">CO: Brighton  - 710 Platte River Blvd.</option><option value="110804">CO: Broomfield - 1190 E. 1st Ave.</option><option value="110334">CO: Canon City - 1837 Fremont Dr.</option><option value="110135">CO: Castle Rock - 207 W. Wolfensberger Rd.</option><option value="110165">CO: Centennial - 5290 E. Arapahoe Rd.</option><option value="110772">CO: Colorado Springs - 1430 Harrison Rd.</option><option value="110123">CO: Colorado Springs - 3902 Palmer Park Blvd.</option><option value="110120">CO: Colorado Springs - 4275 N. Academy Blvd.</option><option value="110050">CO: Colorado Springs - 535 Garden of the Gods Rd.</option><option value="110868">CO: Colorado Springs - 5790 S. Carefree Circle</option><option value="110842">CO: Colorado Springs - 7384 Duryea Dr.</option><option value="700129">CO: Craig  - 1103 W. Victory Way</option><option value="110066">CO: Denver - 400 W. 48th Ave.</option><option value="110717">CO: Denver - 4100 E. Mexico</option><option value="110032">CO: Denver - 4850 Federal</option><option value="110839">CO: Denver - 7051 Tower Rd.</option><option value="110038">CO: Denver - 9050 E. Hampden</option><option value="700018">CO: Ft. Collins - 1402 E. Harmony Rd.</option><option value="700079">CO: Glenwood Springs - 102 W. 6th St.</option><option value="700021">CO: Grand Junction  - 1910 North Ave.</option><option value="700796">CO: Grand Junction  - 757 Horizon Dr.</option><option value="700023">CO: Greeley - 4318 Centerplace Drive</option><option value="700069">CO: Greeley - 921 30th Ave.</option><option value="700765">CO: La Junta - 5 WalMart Way</option><option value="110836">CO: Lakewood - 3160 S. Wadsworth Blvd.</option><option value="110047">CO: Lakewood - 7381 W. Alameda Ave.</option><option value="110788">CO: Littleton - 12622 W. Ken Caryl Ave.</option><option value="110591">CO: Littleton - 23 Centennial Blvd.</option><option value="700041">CO: Loveland - 1225 W. Eisenhower Blvd.</option><option value="110051">CO: Monument - 315 N. Hwy. 105</option><option value="110159">CO: Parker - 19502 E. Parker Square Dr.</option><option value="700101">CO: Pueblo  - 1707 S. Pueblo Blvd.</option><option value="700791">CO: Pueblo - 4719 N. Elizabeth St.</option><option value="700128">CO: Sterling - 203 N. Fourth St.</option><option value="110865">CO: Thornton - 16775 N. Washington St.</option><option value="110025">CO: Thornton - 8370 Sherman St.</option><option value="110578">CO: Westminster - 395 W. 120th Ave.</option><option value="110238">CO: Westminster - 9000 Yukon</option><option value="110170">CO: Wheat Ridge - 4775 Kipling St.</option><option value="110848">FL: Brandon - 1995 W. Lumsden Rd.</option><option value="700154">FL: Clearwater - 2525 Gulf-to-Bay Blvd.</option><option value="700158">FL: Jacksonville - 10140 San Jose Blvd.</option><option value="110924">FL: Lakeland - 3770 Lakeside Village Ct.</option><option value="110858">FL: Land O'Lakes - 2003 Collier Pkwy.</option><option value="700546">FL: Largo - 13105 Walsingham Rd.</option><option value="700339">FL: Orlando  - 6275 Westwood Blvd.</option><option value="700824">FL: Pace  - 4843 Hwy. 90</option><option value="700815">FL: Pensacola  - 1590 E. Nine Mile Rd.</option><option value="700545">FL: Pensacola  - 5170 N. 9th Ave.</option><option value="110872">FL: Riverview - 10293 Big Bend Rd.</option><option value="700559">FL: Sebring - 3101 U.S. 27 South</option><option value="700385">FL: St. Augustine - 900 N. Ponce De Leon Blvd.</option><option value="700819">FL: St. Cloud - 4571 13th St.</option><option value="110153">FL: St. Petersburg - 9107 Fourth St. North</option><option value="700415">FL: Tallahassee - 2531 Apalachee Pkwy.</option><option value="700415">FL: Tallahassee - 2531 Apalachee Pkwy.</option><option value="700548">FL: Tallahassee  - 3392 Lonnbladh Rd.</option><option value="700073">FL: Tampa  - 11302 N. 30th St.</option><option value="700867">FL: Tampa - 13001 Racetrack</option><option value="700005">FL: Tampa - 215 N. Dale Mabry Hwy.</option><option value="700127">FL: Tampa  - 7011 W. Hillsborough Ave.</option><option value="110549">FL: Tampa - 8602 N. Dale Mabry</option><option value="700542">FL: Titusville - 2925 S. Washington Ave.</option><option value="110923">FL: Winter Garden - 3130 Daniels Road</option><option value="700326">FL: Zephyrhills - 5214 Gall Blvd.</option><option value="110855">IA: Altoona - 3410 8th St. SW</option><option value="110235">IA: Ames - 524 Lincoln Way</option><option value="110789">IA: Ankeny - 1024 E. 1st St.</option><option value="110097">IA: Bettendorf - 1210 State St.</option><option value="700116">IA: Cedar Falls - 6301 University Ave.</option><option value="110691">IA: Cedar Rapids - 229 Collins Rd., NE</option><option value="110328">IA: Clinton - 1710 Lincoln Way</option><option value="110778">IA: Coralville - 2800 Commerce Dr.</option><option value="110786">IA: Council Bluffs - 1906 Rue St.</option><option value="110075">IA: Council Bluffs - 2935 W. Broadway</option><option value="110042">IA: Davenport - 1919 Harrison St.</option><option value="110775">IA: Davenport - 5239 Elmore Ave.</option><option value="110338">IA: Davenport - 5925 Brady St.</option><option value="110355">IA: Des Moines - 1140 E. Army Post Rd.</option><option value="110033">IA: Des Moines - 3600 E. 14th St.</option><option value="700072">IA: Dubuque - 1940 John F Kennedy Rd.</option><option value="700152">IA: Fort Dodge - 2002 N. 15th St.</option><option value="110156">IA: Iowa City - #9 Sturgis Corner Dr.</option><option value="110793">IA: Johnston - 8510 Birchwood Court</option><option value="700680">IA: Waterloo - 212 W. Ridgeway Ave.</option><option value="110133">IA: West Des Moines - 2300 University Ave.</option><option value="110163">IL: Moline - 2001 1st St. A</option><option value="110094">IL: Moline - 2122 53rd St.</option><option value="700753">IL: Quincy - 200 N. 36th St.</option><option value="700735">KS: Colby  - 2215 S. Range Rd.</option><option value="700827">KS: Derby - 1200 N. Rock Rd.</option><option value="700698">KS: Hutchinson - 2901 N. Main St.</option><option value="700337">KS: Wichita  - 1685 S. Rock Rd</option><option value="700818">KS: Wichita - 3535 S. Meridian Ave.</option><option value="700327">KS: Wichita - 7020 W. Central Ave.</option><option value="700082">MN: Moorhead - 940 Holiday Dr.</option><option value="700102">MN: Virginia - 1500 13th St. S.</option><option value="700736">MN: Wyoming - 4848 E. Viking Blvd.</option><option value="700776">MO: Ozark - 850 N. 17th St.</option><option value="700915">MO: Republic - 533 E. Elm St.</option><option value="700016">MO: Springfield - 2036 S. Glenstone Ave.</option><option value="700713">MO: Springfield - 4222 S. Campbell Ave.</option><option value="700762">ND: Fargo  - 3140 25th St. S.</option><option value="700919">ND: Fargo - 4900 13th Ave. SW</option><option value="110013">NE: Bellevue - 309 Ft. Crook Rd. N.</option><option value="110857">NE: Bellevue - 3809 Twin Creek Dr.</option><option value="110171">NE: Fremont - 1110 E. 23rd St.</option><option value="110028">NE: Lincoln - 111 S. 29th St.</option><option value="110107">NE: Lincoln - 2949 N. 27th St.</option><option value="110416">NE: Lincoln - 5001 Van Dorn</option><option value="110045">NE: Lincoln - 6555 "O" St.</option><option value="110780">NE: Lincoln - 7101 S. 27th St.</option><option value="110046">NE: Omaha - 10770 "M" St.</option><option value="110806">NE: Omaha - 2525 S. 180th St.</option><option value="110719">NE: Omaha - 3304 S. 143rd Plaza</option><option value="110111">NE: Omaha - 3333 N. 90th St.</option><option value="110801">NE: Omaha - 3839 N. 138th St.</option><option value="110008">NE: Omaha - 4416 Dodge St.</option><option value="110131">NE: Omaha - 5425 "L" St.</option><option value="110847">NE: Omaha - 6607 N. 72nd St.</option><option value="110787">NE: Omaha - 7837 Dodge St.</option><option value="110849">NE: Papillion - 8304 S. 72nd St.</option><option value="110743">NM: Albuquerque - 1514 Coors Blvd. NW</option><option value="110068">NM: Albuquerque - 2017 Menaul Blvd. NE</option><option value="110080">NM: Albuquerque - 2282 Wyoming Blvd. NE</option><option value="110164">NM: Albuquerque - 2340 Yale Blvd. SE</option><option value="110106">NM: Albuquerque - 6300 San Mateo Blvd. NE</option><option value="110843">NM: Albuquerque - 6390 Coors Blvd. NW</option><option value="110635">NM: Albuquerque - 840 Juan Tabo Blvd. NE</option><option value="110146">NM: Farmington - 514 Scott Ave.</option><option value="700759">NM: Rio Rancho - 1741 Rio Rancho Dr. SE</option><option value="110661">OK: Tulsa - 2745 S. Harvard</option><option value="110011">OK: Tulsa - 3302 S. Memorial Dr.</option><option value="110092">OK: Tulsa - 5230 S. Yale Ave.</option><option value="110695">OK: Tulsa - 8320 E. 71st St. S.</option><option value="700031">OR: Beaverton - 10650 SW Beaverton Hillsdale Hwy.</option><option value="110053">OR: Portland - 10301 SE Stark St.</option><option value="700022">OR: Portland - 1621 NE 10th Ave.</option><option value="700105">OR: Tualatin - 17070 SW 72nd Ave.</option><option value="700917">TX: Pleasanton - 1133 West Oaklawn Road</option><option value="700917">TX: Pleasanton - 1133 West Oaklawn Road</option><option value="700741">UT: Logan - 1633 N. Main</option><option value="110043">UT: Murray - 5941 S. State St.</option><option value="110081">UT: North Salt Lake - 450 E. 1100 N.</option><option value="110750">UT: Ogden - 322 12th St.</option><option value="110119">UT: Orem - 212 E. University Pkwy.</option><option value="110737">UT: Provo - 933 S. University Ave.</option><option value="110784">UT: Roy - 1780 W. 5600 S.</option><option value="110002">UT: Salt Lake City - 2929 S. State St.</option><option value="110076">UT: Salt Lake City - 910 E. 400 S.</option><option value="110716">UT: Sandy - 150 W. 10600 S.</option><option value="110887">UT: South Jordan - 11454 S. District Dr.</option><option value="700757">UT: St. George - 29 N. River Rd.</option><option value="110085">UT: Taylorsville - 4681 S. Redwood Rd.</option><option value="110807">UT: West Jordan - 8921 S. Redwood Rd.</option><option value="110861">UT: West Valley City - 4824 W. 3500 S.</option><option value="700234">VA: Virginia Beach - 313 Independence Blvd.</option><option value="700140">WA: Federal Way - 31711 Pacific Hwy. S.</option><option value="700015">WY: Casper - 325 Durbin Street</option><option value="700015">WY: Casper - 325 Durbin Street</option><option value="700015">WY: Casper - 325 Durbin Street</option><option value="700760">WY: Casper - 350 SE Wyoming Blvd.</option><option value="700823">WY: Cheyenne - 2414 W. Lincoln Way</option><option value="700070">WY: Cheyenne - 411 E. 16th St.</option><option value="700124">WY: Douglas - 1840 E. Richards St.</option><option value="700086">WY: Gillette - 806 E. 2nd St.</option><option value="700233">WY: Rock Springs - 2028 Dewar Dr.</option>                  
+
+				  </select>
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+				  <label class="form-label">Birthday:</label>
+				</div>
+				<div class="table-col table-col-8">
+				  <div class="row">
+					<div class="col-xs-4">
+						<select name="BirthMonth" id="BirthMonth">
+						  <option value="">Month</option>
+						  <option value="1">Jan</option>
+						  <option value="2">Feb</option>
+						  <option value="3">Mar</option>
+						  <option value="4">Apr</option>
+						  <option value="5">May</option>
+						  <option value="6">Jun</option>
+						  <option value="7">Jul</option>
+						  <option value="8">Aug</option>
+						  <option value="9">Sep</option>
+						  <option value="10">Oct</option>
+						  <option value="11">Nov</option>
+						  <option value="12">Dec</option>
+						</select>
+					  </div>
+					  <div class="col-xs-4">
+						<select name="BirthDate" id="BirthDate">
+						  <option value="">Day</option>
+						  <option value="1">01</option>
+						  <option value="2">02</option>
+						  <option value="3">03</option>
+						  <option value="4">04</option>
+						  <option value="5">05</option>
+						  <option value="6">06</option>
+						  <option value="7">07</option>
+						  <option value="8">08</option>
+						  <option value="9">09</option>
+						  <option value="10">10</option>
+						  <option value="11">11</option>
+						  <option value="12">12</option>
+						  <option value="13">13</option>
+						  <option value="14">14</option>
+						  <option value="15">15</option>
+						  <option value="16">16</option>
+						  <option value="17">17</option>
+						  <option value="18">18</option>
+						  <option value="19">19</option>
+						  <option value="20">20</option>
+						  <option value="21">21</option>
+						  <option value="22">22</option>
+						  <option value="23">23</option>
+						  <option value="24">24</option>
+						  <option value="25">25</option>
+						  <option value="26">26</option>
+						  <option value="27">27</option>
+						  <option value="28">28</option>
+						  <option value="29">29</option>
+						  <option value="30">30</option>
+						  <option value="31">31</option>
+						</select>
+					  </div>
+					  <div class="col-xs-4">
+						<select name="BirthYear" id="BirthYear">
+						  <option value="">Year</option>
+						  <option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option><option value="1904">1904</option><option value="1903">1903</option><option value="1902">1902</option><option value="1901">1901</option><option value="1900">1900</option>
+						</select>
+					  </div>
+					</div>
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+				  <label class="form-label">Zip Code:</label>
+				</div>
+				<div class="table-col table-col-8">
+				  <input type="text" name="zip" id="zip">
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+				  <label class="form-label">I am at least 13 years old:</label>
+				</div>
+				<div class="table-col table-col-8">
+				  <input type="checkbox">&nbsp;Yes
+				</div>
+			  </div>
+			  <div class="table-grid">
+				<div class="table-col table-col-4">
+				  &nbsp;
+				</div>
+				<div class="table-col table-col-8">
+				  <input type="submit" value="Join Now!" class="btn btn-primary">
+				</div>
+			  </div>
+			</fieldset>
+        </form>  
+    </div>
+  </div>
+</div>
+
+
+
+    </main>
+
+    <footer id="site-footer" role="contentinfo">
+      
+<div class="container">
+  <div class="footer-inner">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="footer_socialmedia">
+          <a href="https://www.facebook.com/bakerssquarerestaurants"><img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_facebookbutton.png" /></a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <nav class="footer-internal-nav">
+          <a href="http://www.villageinn.com/about/">About Us</a> | 
+          <a href="http://www.villageinn.com/franchises/">Franchising</a>  |  
+          <a href="http://www.piereservations.com/bsq/index.aspx?concept=vi&amp;inputsource=VillageInn">Order Pies</a> | 
+          <a href="http://villageinn.jobs">Careers</a> | 
+          <a href="http://www.villageinn.com/guestrelations/">Guest Relations</a> |
+          <a href="http://www.villageinn.com/sitemap/">Site Map</a>
+        </nav>
+        <div class="footer-copyright">
+          <small>&copy; 2015 Village Inn Restaurants. All rights reserved. We're a part of the American Blue Ribbon Holdings family.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav id="footer-mobile-nav">
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-home" href="http://www.villageinn.com/">Home</a>
+    </div>
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-menu" href="http://www.villageinn.com/menu/">Menu</a>
+    </div>
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-pies" href="http://www.villageinn.com/pies/">Pies</a>
+    </div>
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-locations" href="http://www.villageinn.com/locations/">Locations</a>
+    </div>
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-giftcards" href="http://www.villageinn.com/giftcards/">Gift Cards</a>
+    </div>
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-orderpies" href="http://www.piereservations.com/bsq/index.aspx?concept=vi&amp;inputsource=VillageInn">Order Pies</a>
+    </div>
+    <div class="primary-nav-item">
+      <a class="primary-nav-link primary-nav-link-more" href="http://www.villageinn.com/more/">More</a>
+    </div>
+  </nav>
+
+</div>
+
+    </footer>
+
+    <!--<script src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_wclp_scripts.js" type="text/javascript"></script>-->
+    
+
+  </body>
+</html>

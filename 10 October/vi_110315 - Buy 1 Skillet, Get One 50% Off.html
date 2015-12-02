@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" style="background-attachment: fixed;">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Village Inn Offer</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/normalize.css">
+  <link rel="stylesheet" href="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="http://www.villageinn.com/favicon.ico">
+  <style>
+    @media screen and (max-width: 880px) {
+        .bodybox {
+          background-image: none !important;
+          position: relative;
+        }
+
+        .sechdr .columns {
+            text-align: center !important;
+            width: 100% !important;
+        }
+
+        .mobonlineimg {
+            display: block !important;
+            position: absolute;
+            top: 109px;
+            left: 0px;
+            width: 90px !important;
+        }
+    }
+    /* For devices larger than 550px */
+    @media screen and (max-width: 550px) {
+        html {
+            background-size: auto !important;
+        }
+
+        #header .row .columns {
+            float: none !important;
+            text-align: center !important;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .mobcenter {
+            width: 100% !important;
+            max-width: 400px !important;
+            text-align: center !important;
+        }
+
+        .onehundred {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo {
+            margin: auto !important;
+        }
+
+        .deskhdr {
+            display: none !important;
+        }
+
+        .mobhdr {
+            display: block !important;
+        }
+
+        .rowbuy, .rowget {
+            padding: 5px 50px !important;
+        }
+
+        .bodybox {
+            position: relative;
+        }
+
+        .mobonlineimg {
+            display: block !important;
+            position: absolute;
+            top: 142px;
+            left: 0px;
+            width: 67px !important;
+        }
+
+        .buydiv {
+            padding-top: 0 !important;
+        }
+
+        .percent, .incentive {
+            text-align: center !important;
+        }
+
+        .sechdr .columns {
+            text-align: center !important;
+            width: 100% !important;
+        }
+
+        .horzborder {
+            width: 100% !important;
+        }
+
+        .couponoffer h1 {
+            margin: 0 !important;
+        }
+
+        .incentive {
+            padding-top: 0 !important;
+        }
+
+        .incentive h3 {
+            font-size: 2.5rem !important;
+        }
+
+        p.disclaimer {
+            font-size: 10.5px !important;
+        }
+    }
+
+    html {
+        height: 100%;
+        background: url(http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/landingbg2.jpg) top center repeat #ACE0EE;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    body {
+        font-size: 1.2em !important;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .hdr {
+        font-weight: bold;
+    }
+
+    .break {
+        word-wrap: break-word;
+    }
+
+    #header, #content, #footer {
+        width: 100%;
+    }
+
+    #header {
+        height: 103px;
+        background: url(http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_header_bg.gif) top repeat-x #ed5e11;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+    }
+
+    #content {
+        height: 100%;
+    }
+
+    .container {
+        padding: 0 !important;
+    }
+
+    .horzborder {
+        max-width: 960px;
+        height: 23px;
+        background: url(http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_lp_giftcardpromo_stripehorzborder.gif) center repeat-x;
+        margin: auto;
+    }
+
+    .bodybox {
+        max-width: 600px;
+    	margin: auto;
+		margin-top: 15px;
+		margin-bottom: 30px;
+		padding: 15px 10px;
+		background-color: #ffffff;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		border: 5px dashed #ACE0EE;
+	}
+
+    .mobonlineimg {
+        display: none;
+    }
+
+    .bodybox h1, h2, h3, h4, h5 {
+        color: #ED5E11;
+    }
+
+    .fiftypercent {
+      width: 50%;
+    }
+
+    .nomargin {
+        margin: 0;
+    }
+
+    .autowidth {
+      width: auto;
+    }
+
+    .heading {
+        text-align: center;
+    }
+    .deskhdr {
+        margin: auto;
+        display: block;
+    }
+
+    .hdrimg {
+        width: 530px;
+        display: block;
+        margin: auto;
+    }
+
+    .sechdr {
+        padding-top: 15px;
+    }
+
+    .rowbuy {
+        max-width: 395px;
+        padding-top: 20px;
+    }
+
+    .buydiv {
+        padding-top: 17px;
+    }
+
+    .rowget {
+        max-width: 401px; padding-top: 15px;
+    }
+
+    .hdrparts {
+        padding: 0;
+
+    }
+
+    .center {
+        margin: auto;
+    }
+
+    .percent {
+        text-align: center;
+    }
+
+    .percent h1 {
+        font-size: 7rem;
+        font-weight: 700;
+		margin: 0;
+    }
+
+    .percent h1 .perclight {
+        font-weight: 300;
+    }
+
+    .incentive {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .incentive .check {
+        color: #555555;
+        font-family: Helvetica;
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 3.5rem;
+    }
+
+    .expiration {
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+
+    .light {
+        color: #555555;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 3.5rem;
+    }
+
+    .couponcontainer {
+        max-width: 200px;
+        margin: 15px 0;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .couponcontainer img {
+        width: 100%;
+    }
+
+    p.disclaimer {
+        max-width: 500px;
+        margin: 30px auto;
+        font-size: 12px;
+        font-style: italic;
+        color: #555555;
+    }
+
+    #footer {
+        background-color: #FAD36E;
+    }
+  </style>
+<body>
+<div id="header">
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row header">
+            <div class="two columns"><a href="http://www.villageinn.com" target="_blank"><img class="logo" src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/vi_logo_transparent.png" border="0" /></a></div>
+            <div class="ten columns "><!--<h1>DISCOUNT OFFERS</h1>--></div>
+        </div><!-- End Row -->
+    </div><!-- End Container div -->
+</div><!-- End id header -->
+
+<span style="display: none;">
+	%%[
+		@EmailAddress
+	]%%
+</span>
+
+<div id="content">
+    <div class="container">
+        <div class="bodybox">
+			<span>
+			%%[IF NOT EMPTY(EmailAddress) then]%%
+				%%[
+					SET @EmailAddress = Lookup('ent.VI_Master_Subscriber_Data','EmailAddress','EmailAddress',EmailAddress)
+				]%%
+			</span>
+            <h1 class="heading">%%=UPPERCASE(FirstName)=%%,<br/>GET YOUR FRIENDS TOGETHER FOR:</h1>
+            <div class="row couponoffer">
+                 <div class="twelve columns percent"><h1><sup style="top: -0.2em;"><span style="font-size: 46px; font-weight: 400;"></span></sup>SUPER SKILLET <span class="perclight">SUNDAY</span></h1></div>
+                <div class="twelve columns incentive" style="padding-top: 6px !important;"><h3 class="check" style="font-size: 3rem !important; font-weight: 400 !important;">Buy 1 Skillet, Get 1 Skillet 50% Off</h3></div>
+            </div><!-- End Coupon Offer -->
+			<!--
+			<div style="font-weight: bold; font-size: 30px; font-weight: bold; text-align: center; margin-bottom: 2rem; color: #ed5e11;">- OR -</div>
+			<div class="row couponoffer">
+                <div class="twelve columns percent"><h1><sup style="top: -0.2em;"><span style="font-size: 46px; font-weight: 400;">$</span></sup>2.50 <span class="perclight">OFF</span></h1></div>
+                <div class="twelve columns incentive" style="padding-top: 6px !important;"><h3 class="check" style="font-size: 3rem !important; font-weight: 400 !important;">1 Entr&eacute;e and 1 Beverage</h3></div>
+            </div> End Coupon Offer 
+			-->
+            <h5 class="expiration">Valid: &nbsp;<span class="light">11/8/15</span></h4>
+            <div class="couponcontainer">
+                <img src="http://image.villageinn-eclub.com/lib/fe8f1372756d05787d/m/1/110315__coupon-code_P55245---Tulsa.gif" alt="Coupon Code" />
+            </div><!-- End Coupon Container -->
+            <p class="disclaimer">
+                Valid only Sunday, November 8th at participating restaurants. Offers valid on all on-menu and feature Skillets all day on November 8, 2015. Not valid with other offers/promotions.
+            </p>
+            <div class="printbttn">
+                <center>
+                   <script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 1;var pfHideImages = 0;var pfImageDisplayStyle = 'right';var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = '';var pfBtVersion='1';(function(){var js, pf;pf = document.createElement('script');pf.type = 'text/javascript';if('https:' == document.location.protocol){js='https://pf-cdn.printfriendly.com/ssl/main.js'}else{js='http://cdn.printfriendly.com/printfriendly.js'}pf.src=js;document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="http://www.printfriendly.com" style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="http://cdn.printfriendly.com/pf-button-big.gif" alt="Print Friendly and PDF"/></a>
+                </center>
+            </div><!-- End Print Button -->
+			%%[ELSE]%%
+			<center><h1>Sorry, you must access this coupon by clicking from your email.</h1></center>
+			%%[endif]%%
+        </div><!-- End Body Box -->
+    </div><!-- End Container -->
+</div><!-- End Content -->
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
